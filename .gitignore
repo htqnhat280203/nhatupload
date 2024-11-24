@@ -1,0 +1,8 @@
+node_modules/
+
+# Ignore .env file
+.env
+
+rsync -avz --exclude 'node_modules' --exclude '.git' --exclude '.env' \
+-e "ssh -i C:\Users\DELL\Downloads\.ssh\anhs-keypair.pem" \
+. ec2-user@13.112.175.68:~/app

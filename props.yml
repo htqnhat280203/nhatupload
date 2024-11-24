@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Resources:
+  DemoS3:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: "anhslailaptrinh-cloudformation-s3"
+      Tags:
+        - Key: "Environment"
+          Value: "dev"
+        - Key: "CreatedBy"
+          Value: "anhslailaptrinh"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
+      VersioningConfiguration:
+        Status: "Enabled"
